@@ -8,7 +8,8 @@ const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const rateLimit = require("express-rate-limit");
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// More robust email validation regex
+const EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -144,9 +145,9 @@ app.post("/api/requests", async (req, res) => {
   try {
     const { name, email, phone, address, service, message, honeypot } = req.body;
 
-    // Honeypot check
+    // Honeypot check - silently reject spam
     if (honeypot) {
-      console.log("Honeypot triggered - likely spam");
+      // Return success to avoid detection, but don't log
       return res.json({ success: true, message: "Request submitted successfully!" });
     }
 
@@ -266,9 +267,9 @@ app.post("/api/reviews", async (req, res) => {
   try {
     const { name, city, rating, message, honeypot } = req.body;
 
-    // Honeypot check
+    // Honeypot check - silently reject spam
     if (honeypot) {
-      console.log("Honeypot triggered - likely spam");
+      // Return success to avoid detection, but don't log
       return res.json({ success: true, message: "Review submitted successfully!" });
     }
 
