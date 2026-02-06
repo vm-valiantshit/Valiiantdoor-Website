@@ -12,22 +12,12 @@
       "dest": "server/server.js"
     },
     {
-      "src": "/(.*\\.(css|js|json|xml|txt|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|eot))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*\\.html)?",
-      "dest": "/$1"
-    },
-    {
       "src": "/",
       "dest": "/index.html"
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/(.*)",
-      "destination": "/$1"
+      "src": "/(.*\\.(css|js|json|xml|txt|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|eot|html))",
+      "dest": "/$1"
     }
   ]
 }
