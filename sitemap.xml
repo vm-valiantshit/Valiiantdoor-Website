@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://2026-01-26-website.vercel.app/</loc>
+    <loc>https://valiantdoor.com/</loc>
   </url>
   <url>
-    <loc>https://2026-01-26-website.vercel.app/services</loc>
+    <loc>https://valiantdoor.com/about</loc>
   </url>
   <url>
-    <loc>https://2026-01-26-website.vercel.app/quote</loc>
+    <loc>https://valiantdoor.com/services</loc>
   </url>
   <url>
-    <loc>https://2026-01-26-website.vercel.app/mission</loc>
+    <loc>https://valiantdoor.com/quote</loc>
   </url>
   <url>
-    <loc>https://2026-01-26-website.vercel.app/gallery</loc>
+    <loc>https://valiantdoor.com/mission</loc>
+  </url>
+  <url>
+    <loc>https://valiantdoor.com/gallery</loc>
+  </url>
+  <url>
+    <loc>https://valiantdoor.com/contact</loc>
   </url>
 </urlset>
