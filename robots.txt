@@ -1,4 +1,24 @@
+# Allow all crawlers, including AI agents, to access the site
 User-agent: *
+Allow: /
+
+# Explicitly allow common AI-related crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://valiantdoor.com/sitemap.xml
